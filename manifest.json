@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+
+  "author": "steve@stevebass.me",
+  "name": "Domestic Hearth",
+  "version": "0.0.1",
+  "description": "The hearth: sit down, and be free of distractions.",
+  "icons": {
+    "16": "assets/enabled-16_16.png",
+    "32": "assets/enabled-32_32.png",
+    "48": "assets/enabled-48_48.png",
+    "128": "assets/enabled-128_128.png"
+  },
+
+  "host_permissions": ["<all_urls>"],
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "declarativeNetRequestWithHostAccess",
+    "notifications",
+    "storage",
+    "webNavigation"
+  ],
+
+  "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "redirect_rules",
+      "enabled": true,
+      "path": "redirect_rules.json"
+    }]
+  },
+
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "dist/background.js",
+    "type": "module"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["dist/content.js"]
+  }],
+  "minimum_chrome_version": "114.0.5735.198"
+}

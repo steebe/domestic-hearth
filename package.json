@@ -1,0 +1,32 @@
+{
+  "name": "domestic-hearth",
+  "version": "0.0.1",
+  "description": "The hearth: sit down, and be free of distractions.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steebe/domestic-hearth.git"
+  },
+  "keywords": [
+    "chrome",
+    "extension",
+    "distraction",
+    "productivity"
+  ],
+  "author": "steve@stevebass.me",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/steebe/domestic-hearth/issues"
+  },
+  "homepage": "https://github.com/steebe/domestic-hearth#readme",
+  "dependencies": {
+    "@types/chrome": "^0.0.246"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

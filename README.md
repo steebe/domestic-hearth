@@ -1,4 +1,9 @@
-TODO:
-- https://developer.chrome.com/docs/extensions/mv3/getstarted/extensions-101/
-- https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/
-- https://developer.mozilla.org/en-US/docs/Web/API
+# domestic-hearth
+
+A simple Google Chrome extension for mapping websites to a redirect, intended to help those that have a hard time avoiding the temptations of the open web.
+
+### Tools
+
+- Chrome API
+- [DALL-E 2](https://openai.com/dall-e-2) for generating the extension's icons
+- [Online PNG Tools](https://onlinepngtools.com/resize-png) for editing the original images down to web sizes

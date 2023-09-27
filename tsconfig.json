@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "outDir": "./dist",
+    "strict": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+  },
+
+  "include": ["./src/**/*"],
+
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["**/node_modules", "dist"],
+    // "excludeFiles": ["build/fileWhichChangesOften.ts"]
+  }
+}
