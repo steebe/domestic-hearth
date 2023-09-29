@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html style="min-width:400px;">
 <head>
     <title>Domestic Hearth</title>
+    <style>
+      body {
+        text-align: center;
+        min-width: 100px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      table, th, td {
+        border: 1px solid black;
+      }
+      th, td {
+        padding: 8px 12px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      #submit {
+        margin: 5px 0 0px 0;
+        padding: 5px 5px 5px 5px;
+
+        background-color: white;
+        border: 1px solid darkgrey;
+        color: black;
+
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+
+        transition-duration: 0.2s;
+      }
+      #submit:hover {
+        box-shadow: 3px 3px darkgrey;
+      }
+      #submit:active {
+        background-color: white;
+        box-shadow: 0 0 0 0;
+        transform: translateX(3px) translateY(3px);
+      }
+    </style>
 </head>
 <body>
-    <h1>Focus, here, at the hearth.</h1>
-    <script src="dist/popup.js"></script>
+    <h2><b><i>Domestic Hearth</i></b></h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>distraction</th>
+          <th>replacement</th>
+        </tr>
+      </thead>
+      <tbody class="overrideTable">
+        <!-- <tr class="override">
+          <td><input class="distraction" type="text" placeholder="..."></td>
+          <td><input class="replacement" type="text" placeholder="..."></td>
+        </tr> -->
+      </tbody>
+    </table>
+    
+    <button id="submit">focus</button>
+
+    <br>
+
+    <button id="clear">clear</button>
+
+    <script type="module" src="dist/popup.js"></script>
 </body>
 </html>

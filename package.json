@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "scripts": {
     "build": "tsc",
+    "clean": "rm -rf dist/",
     "watch": "tsc --watch"
   },
   "repository": {

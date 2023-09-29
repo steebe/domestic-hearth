@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "target": "es2022",
     "module": "es2022",
     "outDir": "./dist",
@@ -16,6 +17,5 @@
     "fallbackPolling": "dynamicPriority",
     "synchronousWatchDirectory": true,
     "excludeDirectories": ["**/node_modules", "dist"],
-    // "excludeFiles": ["build/fileWhichChangesOften.ts"]
   }
 }
