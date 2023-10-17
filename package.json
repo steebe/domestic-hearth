@@ -1,7 +1,7 @@
 {
   "name": "domestic-hearth",
   "version": "0.0.1",
-  "description": "The hearth: sit down, and be free of distractions.",
+  "description": "Sit by the hearth, and watch your distractions be converted into productivity.",
   "main": "webpack.config.js",
   "scripts": {
     "build": "tsc",
