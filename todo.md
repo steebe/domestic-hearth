@@ -1,3 +1,1 @@
-- implement chrome.storage implementation for storing redirect map
-- update popup to dynamically load redirect map and allow for entry submission
 - change the dynamic icon loading such that: default state is ash, upon actually redirecting, enable icon

@@ -8,6 +8,10 @@
         min-width: 100px;
       }
 
+      h2 > *:last-child {
+        float: right;
+      }
+
       table {
         width: 100%;
         border-collapse: collapse;
@@ -22,9 +26,21 @@
       input[type="text"] {
         width: 100%;
         box-sizing: border-box;
+        border-color: lightgray;
       }
 
-      #submit {
+      #error {
+        border-color: red;
+      }
+
+      .buttonContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+
+      #submit,#clear {
         margin: 5px 0 0px 0;
         padding: 5px 5px 5px 5px;
 
@@ -39,10 +55,10 @@
 
         transition-duration: 0.2s;
       }
-      #submit:hover {
+      #submit:hover,#clear:hover {
         box-shadow: 3px 3px darkgrey;
       }
-      #submit:active {
+      #submit:active,#clear:active {
         background-color: white;
         box-shadow: 0 0 0 0;
         transform: translateX(3px) translateY(3px);
@@ -50,7 +66,15 @@
     </style>
 </head>
 <body>
-    <h2><b><i>Domestic Hearth</i></b></h2>
+    <h2>
+      <b><i>Domestic Hearth</i></b>
+      <a href="https://github.com/steebe/domestic-hearth/#readme"
+         target="_blank"
+         style="padding-right:10px; text-decoration: none;"
+      >
+         ?
+      </a>
+    </h2>
 
     <table>
       <thead>
@@ -59,19 +83,14 @@
           <th>replacement</th>
         </tr>
       </thead>
-      <tbody class="overrideTable">
-        <!-- <tr class="override">
-          <td><input class="distraction" type="text" placeholder="..."></td>
-          <td><input class="replacement" type="text" placeholder="..."></td>
-        </tr> -->
-      </tbody>
+      <tbody class="overrideTable"></tbody>
     </table>
     
-    <button id="submit">focus</button>
-
-    <br>
-
-    <button id="clear">clear</button>
+    <div class="buttonContainer">
+      <button id="submit"><b><i>focus</i></b></button>
+      <button id="clear"><i>clear</i></button>
+    </div>
+  
 
     <script type="module" src="dist/popup.js"></script>
 </body>
