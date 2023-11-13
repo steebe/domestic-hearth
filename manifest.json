@@ -15,11 +15,7 @@
   "host_permissions": ["<all_urls>"],
   "permissions": [
     "declarativeNetRequest",
-    "declarativeNetRequestFeedback",
-    "declarativeNetRequestWithHostAccess",
-    "notifications",
-    "storage",
-    "webNavigation"
+    "storage"
   ],
 
   "declarative_net_request" : {
