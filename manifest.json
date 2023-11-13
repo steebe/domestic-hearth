@@ -3,13 +3,13 @@
 
   "author": "steve@stevebass.me",
   "name": "Domestic Hearth",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "The hearth: sit down, and be free of distractions.",
   "icons": {
-    "16": "assets/enabled-16_16.png",
-    "32": "assets/enabled-32_32.png",
-    "48": "assets/enabled-48_48.png",
-    "128": "assets/enabled-128_128.png"
+    "16": "assets/icon_16x16.png",
+    "32": "assets/icon_32x32.png",
+    "48": "assets/icon_48x48.png",
+    "128": "assets/icon_128x128.png"
   },
 
   "host_permissions": ["<all_urls>"],
