@@ -5,6 +5,8 @@ import { isValidUrl } from "./utils/url.js";
 
 export const DATA_ID_ATTRIBUTE_NAME = "data-id";
 
+export const $ = (id: string): HTMLElement | null => document?.getElementById(id);
+
 export function clearOverridesTable(): void {
   const overrideTable = document?.querySelector(".overrideTable");
   while(overrideTable?.firstChild) {
@@ -36,6 +38,8 @@ export function renderPlaceholderRow(): void {
 
   const overrideTable = document?.querySelector(".overrideTable");
   overrideTable?.appendChild(overrideRow);
+
+  distractionInput.focus();
 }
 
 export function renderOverrideRow(override: Override): void {

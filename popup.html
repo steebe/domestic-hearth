@@ -76,22 +76,23 @@
       </a>
     </h2>
 
-    <table>
-      <thead>
-        <tr>
-          <th>distraction</th>
-          <th>replacement</th>
-        </tr>
-      </thead>
-      <tbody class="overrideTable"></tbody>
-    </table>
-    
-    <div class="buttonContainer">
-      <button id="submit"><b><i>focus</i></b></button>
-      <button id="clear"><i>clear</i></button>
-    </div>
+    <form id="overridesForm">
+      <table>
+        <thead>
+          <tr>
+            <th>distraction</th>
+            <th>replacement</th>
+          </tr>
+        </thead>
+        <tbody class="overrideTable"></tbody>
+      </table>
+      
+      <div class="buttonContainer">
+        <button id="submit" type="submit"><b><i>focus</i></b></button>
+        <button id="clear"><i>clear</i></button>
+      </div>
+    </form>
   
-
     <script type="module" src="dist/popup.js"></script>
 </body>
 </html>

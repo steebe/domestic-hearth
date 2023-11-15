@@ -1,10 +1,13 @@
 import { clear, init, submitLatestOverride } from "./hearth-service.js";
-
-const $ = (id: string): HTMLElement | null => document?.getElementById(id);
+import { $ } from "./ui.js";
 
 const submit = async () => submitLatestOverride();
 
-$("submit")?.addEventListener("click", submit);
+$("overridesForm")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  submit();
+});
+
 $("clear")?.addEventListener("click", async () => {
   clear();
 });
