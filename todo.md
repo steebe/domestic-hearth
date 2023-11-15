@@ -1,1 +1,5 @@
 - change the dynamic icon loading such that: default state is ash, upon actually redirecting, enable icon
+- make input proper form such that `focus` button acts like a submit
+    - Enter key should update
+    - Upon submission, when placeholder row is created, focus on distraction placeholder
+- make override table fixed height, and scrollable once rows exceed height
