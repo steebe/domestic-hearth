@@ -7,7 +7,6 @@ export const clear = async() => {
   try {
     const hearth = await getHearth();
     if (hearth === null || Object.keys(hearth).length === 0) {
-      console.info("No hearth to clear.");
       return;
     }
     const currentOverrides: Array<Override> = hearth[HEARTH_STORAGE_KEY] || [];
@@ -16,7 +15,7 @@ export const clear = async() => {
     clearOverridesTable();
     renderPlaceholderRow();
   } catch (e) {
-    console.log(e);
+    return;
   }
 }
 
@@ -45,7 +44,6 @@ export const init = async () => {
     };
     chrome.storage.local.set(
       initialHearth,
-      () => console.info("Hearth initialized...")
     );
     hearth = await getHearth();
   }

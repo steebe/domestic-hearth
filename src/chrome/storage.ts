@@ -15,7 +15,6 @@ export const clearHearth = async () => {
   }
   chrome.storage.local.set(
     {hearth: []},
-    () => console.info("Cleared the hearth")
   );
 }
 
@@ -28,7 +27,6 @@ export const amendHearth = async (override: Override) => {
   currentOverrides.push(override);
   chrome.storage.local.set(
     {hearth: currentOverrides},
-    () => console.log("Added override to storage.")
   );
 }
 
