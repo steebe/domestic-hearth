@@ -1,7 +1,7 @@
 import { getNextOverrideId } from "./chrome/storage.js";
 import { UnfinishedOverrideError } from "./error.js";
 import { Override } from "./override.js";
-import { isValidUrl } from "./utils/url.js";
+import { massageReplacement } from "./utils/url.js";
 
 export const DATA_ID_ATTRIBUTE_NAME = "data-id";
 
@@ -112,18 +112,14 @@ export const getLatestOverrideDraft = async (): Promise<Override | null> => {
   }
 
   const replacementInputElement = (overrideDraft.querySelector(".replacement") as HTMLInputElement);
-  const replacement = replacementInputElement?.value;
-  console.log("Replacement valid: ", isValidUrl(replacement));
-  if (
-    replacement === null
-    || replacement === undefined
-    || replacement.length === 0
-    || !isValidUrl(replacement)
-  ) {
+  let replacement = replacementInputElement?.value;
+  try {
+    replacement = massageReplacement(replacement);
+    replacementInputElement.value = replacement;
+    replacementInputElement.removeAttribute("id");
+  } catch(e) {
     replacementInputElement.setAttribute("id", "error");
     missingRequiredField = true;
-  } else {
-    replacementInputElement.removeAttribute("id");
   }
 
   if (missingRequiredField) {

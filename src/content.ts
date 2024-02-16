@@ -1,1 +1,1 @@
-console.log("Content script...");
+() => console.log("no-op");

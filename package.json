@@ -1,6 +1,6 @@
 {
   "name": "domestic-hearth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sit by the hearth, and watch your distractions be converted into productivity.",
   "main": "webpack.config.js",
   "scripts": {
